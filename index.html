@@ -63,6 +63,42 @@
             margin-top: 10px;
         }
         .btn:hover { background: #004c94; }
+
+        /* ------- SLIDER ------- */
+        .slider-container {
+            width: 100%;
+            max-width: 900px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            font-size: 26px;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .slider-btn.left { left: 10px; }
+        .slider-btn.right { right: 10px; }
     </style>
 </head>
 <body>
@@ -71,6 +107,18 @@
     <h1>Junta de vecinos Vicente Naranjo</h1>
     <p>Unidos por el bienestar y el desarrollo de nuestra comunidad</p>
 </header>
+
+<!-- SLIDER AGREGADO -->
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <img src="https://via.placeholder.com/900x300?text=Comunidad+1" alt="">
+        <img src="https://via.placeholder.com/900x300?text=Comunidad+2" alt="">
+        <img src="https://via.placeholder.com/900x300?text=Comunidad+3" alt="">
+    </div>
+
+    <button class="slider-btn left" onclick="moverSlider(-1)">❮</button>
+    <button class="slider-btn right" onclick="moverSlider(1)">❯</button>
+</div>
 
 <nav>
     <a href="#sobre">Sobre Nosotros</a>
@@ -142,7 +190,23 @@
     © 2025 Manos Unidas – Organización Social. Todos los derechos reservados.
 </footer>
 
+<script>
+    let index = 0;
+
+    function moverSlider(dir) {
+        const slider = document.getElementById("slider");
+        const total = slider.children.length;
+
+        index += dir;
+        if (index < 0) index = total - 1;
+        if (index >= total) index = 0;
+
+        slider.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    // Deslizamiento automático cada 4 segundos (opcional)
+    // setInterval(() => moverSlider(1), 4000);
+</script>
+
 </body>
 </html>
-
-
