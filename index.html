@@ -1,212 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junta de vecinos Vicente Naranjo - Organización Social</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8f8f8;
-            line-height: 1.6;
-        }
-        header {
-            background: #005bbb;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        nav {
-            background: #003f7e;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            margin-bottom: 20px;
-            border-radius: 6px;
-        }
-        h2 {
-            color: #005bbb;
-        }
-        footer {
-            background: #003f7e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-        .programa {
-            border-left: 4px solid #005bbb;
-            padding: 10px 15px;
-            margin: 15px 0;
-            background: #eef5ff;
-            border-radius: 4px;
-        }
-        .btn {
-            display: inline-block;
-            background: #005bbb;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        .btn:hover { background: #004c94; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junta de Vecinos Vicente Naranjo</title>
 
-        /* ------- SLIDER ------- */
-        .slider-container {
-            width: 100%;
-            max-width: 900px;
-            height: 300px;
-            margin: 20px auto;
-            overflow: hidden;
-            border-radius: 8px;
-            position: relative;
-        }
-        .slider {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.5s ease;
-        }
-        .slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            border: none;
-            color: white;
-            font-size: 26px;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .slider-btn.left { left: 10px; }
-        .slider-btn.right { right: 10px; }
-    </style>
+  <!-- SEO básico -->
+  <meta name="description" content="Sitio oficial de la Junta de Vecinos Vicente Naranjo. Información comunitaria, actas, noticias y contacto.">
+  <meta name="author" content="Junta de Vecinos Vicente Naranjo">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Junta de vecinos Vicente Naranjo</h1>
-    <p>Unidos por el bienestar y el desarrollo de nuestra comunidad</p>
-</header>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="container header-content">
+      <img src="assets/img/logo.png" alt="Logo Junta de Vecinos Vicente Naranjo" class="logo">
 
-<!-- SLIDER AGREGADO -->
-<div class="slider-container">
-    <div class="slider" id="slider">
-        <img src="https://via.placeholder.com/900x300?text=Comunidad+1" alt="">
-        <img src="https://via.placeholder.com/900x300?text=Comunidad+2" alt="">
-        <img src="https://via.placeholder.com/900x300?text=Comunidad+3" alt="">
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="pages/noticias.html">Noticias</a></li>
+          <li><a href="pages/actas.html">Actas</a></li>
+          <li><a href="pages/estatutos.html">Estatutos</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <button class="slider-btn left" onclick="moverSlider(-1)">❮</button>
-    <button class="slider-btn right" onclick="moverSlider(1)">❯</button>
-</div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
 
-<nav>
-    <a href="#sobre">Sobre Nosotros</a>
-    <a href="#mision">Misión y Visión</a>
-    <a href="#programas">Programas</a>
-    <a href="#voluntariado">Voluntariado</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+    <!-- PRESENTACIÓN -->
+    <section class="hero">
+      <div class="container">
+        <h1>Junta de Vecinos Vicente Naranjo</h1>
+        <p>
+          Organización comunitaria sin fines de lucro, constituida conforme a la
+          <strong>Ley N° 19.418</strong>, orientada a la representación, participación
+          y desarrollo del barrio.
+        </p>
+      </div>
+    </section>
 
-<section id="sobre">
-    <h2>Sobre Nosotros</h2>
-    <p>
-        Somos una organización social sin fines de lucro dedicada a impulsar
-        programas de educación, salud y desarrollo comunitario. Trabajamos con
-        pasión para mejorar la calidad de vida de personas en situación de vulnerabilidad.
-    </p>
-</section>
+    <!-- AVISOS IMPORTANTES -->
+    <section class="avisos">
+      <div class="container">
+        <h2>Avisos Comunitarios</h2>
 
-<section id="mision">
-    <h2>Misión</h2>
-    <p>
-        Promover el bienestar social mediante iniciativas sostenibles que fortalezcan
-        a las comunidades y fomenten la igualdad de oportunidades.
-    </p>
+        <article class="aviso">
+          <h3>Asamblea General Ordinaria</h3>
+          <p>
+            Se cita a todos los vecinos y vecinas a Asamblea General el día
+            <strong>viernes 22 de marzo de 2025</strong>, a las 19:00 hrs,
+            en la sede comunitaria.
+          </p>
+        </article>
 
-    <h2>Visión</h2>
-    <p>
-        Ser una organización líder en programas de impacto social, reconocida por
-        su compromiso, inclusión y transparencia.
-    </p>
-</section>
+        <article class="aviso">
+          <h3>Horario de Atención</h3>
+          <p>
+            Atención a vecinos: martes y jueves, de 18:00 a 20:00 hrs.
+          </p>
+        </article>
+      </div>
+    </section>
 
-<section id="programas">
-    <h2>Nuestros Programas</h2>
+    <!-- TRANSPARENCIA -->
+    <section class="transparencia">
+      <div class="container">
+        <h2>Transparencia y Documentos</h2>
 
-    <div class="programa">
-        <h3>📚 Programa de Apoyo Educativo</h3>
-        <p>Clases, tutorías y becas para niños y jóvenes.</p>
+        <ul class="links-transparencia">
+          <li>
+            <a href="docs/estatutos.pdf" target="_blank" rel="noopener">
+              Estatutos Vigentes (PDF)
+            </a>
+          </li>
+          <li>
+            <a href="pages/actas.html">
+              Actas de Asambleas
+            </a>
+          </li>
+          <li>
+            <a href="docs/rendiciones/rendicion-2024.pdf" target="_blank" rel="noopener">
+              Rendición de Cuentas
+            </a>
+          </li>
+        </ul>
+
+        <p class="nota-legal">
+          La información publicada se enmarca en los principios de participación,
+          probidad y transparencia establecidos en la legislación chilena vigente.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIRECTIVA -->
+    <section class="directiva">
+      <div class="container">
+        <h2>Directiva Vigente</h2>
+
+        <ul class="lista-directiva">
+          <li><strong>Presidenta:</strong> María Pérez</li>
+          <li><strong>Secretario:</strong> Juan Soto</li>
+          <li><strong>Tesorera:</strong> Ana González</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container footer-content">
+
+      <p>
+        <strong>Junta de Vecinos Vicente Naranjo</strong><br>
+        Personalidad Jurídica N° 1234<br>
+        Comuna de __________, Región de __________
+      </p>
+
+      <p>
+        Correo de contacto:
+        <a href="mailto:contacto@juntavicentenaranjo.cl">
+          contacto@juntavicentenaranjo.cl
+        </a>
+      </p>
+
+      <p class="copyright">
+        © 2025 Junta de Vecinos Vicente Naranjo. Todos los derechos reservados.
+      </p>
+
     </div>
-
-    <div class="programa">
-        <h3>❤️ Salud Comunitaria</h3>
-        <p>Campañas de vacunación, talleres de nutrición y jornadas médicas.</p>
-    </div>
-
-    <div class="programa">
-        <h3>🌱 Desarrollo Sostenible</h3>
-        <p>Proyectos ambientales, reciclaje y agricultura comunitaria.</p>
-    </div>
-</section>
-
-<section id="voluntariado">
-    <h2>Voluntariado</h2>
-    <p>
-        Únete a nuestro equipo de voluntarios y ayuda a transformar vidas.
-        Tu tiempo y habilidades pueden marcar la diferencia.
-    </p>
-    <a class="btn" href="#contacto">Quiero ser voluntario</a>
-</section>
-
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Email:</strong> contacto@manosunidas.org</p>
-    <p><strong>Teléfono:</strong> +58 000 0000</p>
-    <p><strong>Dirección:</strong> Calle Principal, Ciudad, País</p>
-</section>
-
-<footer>
-    © 2025 Manos Unidas – Organización Social. Todos los derechos reservados.
-</footer>
-
-<script>
-    let index = 0;
-
-    function moverSlider(dir) {
-        const slider = document.getElementById("slider");
-        const total = slider.children.length;
-
-        index += dir;
-        if (index < 0) index = total - 1;
-        if (index >= total) index = 0;
-
-        slider.style.transform = `translateX(${-index * 100}%)`;
-    }
-
-    // Deslizamiento automático cada 4 segundos (opcional)
-    // setInterval(() => moverSlider(1), 4000);
-</script>
+  </footer>
 
 </body>
 </html>
